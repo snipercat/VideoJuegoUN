@@ -11,8 +11,11 @@ public class ZeroControllerScript : MonoBehaviour {
 	public bool grounded = false;
 	public LayerMask groundLayer;
 
+<<<<<<< HEAD
 	public AnimationState attack;
 
+=======
+>>>>>>> ad7228686df2c24228fcb6ce324e66662f336257
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
@@ -44,6 +47,7 @@ public class ZeroControllerScript : MonoBehaviour {
 	}
 
 	void Update(){
+<<<<<<< HEAD
 		if (Input.GetKeyDown (KeyCode.Z)) {
 						if (!anim.GetCurrentAnimatorStateInfo (0).IsTag ("Attack"))
 								anim.SetBool ("Attack", true);
@@ -59,6 +63,16 @@ public class ZeroControllerScript : MonoBehaviour {
 
 	void EndAttack(){
 		anim.SetBool ("Attack", false);
+=======
+		if (!anim.GetCurrentAnimatorStateInfo (0).IsName ("Attack2") &&
+		    Input.GetKeyDown ("z")) {
+						anim.SetBool ("Attack", true);
+						anim.SetInteger ("AttackCount", anim.GetInteger ("AttackCount") + 2);
+				} else {
+						anim.SetBool ("Attack", false);
+						anim.SetInteger ("AttackCount", 0);
+				}
+>>>>>>> ad7228686df2c24228fcb6ce324e66662f336257
 	}
 
 	void Flip(){
