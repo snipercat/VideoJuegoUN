@@ -25,6 +25,8 @@ public class Controls : MonoBehaviour {
 						direction = 1;
 		}
 
+
+
 		if (Input.GetAxis ("Horizontal") == 0)
 						animation.Idle ();
 		else {

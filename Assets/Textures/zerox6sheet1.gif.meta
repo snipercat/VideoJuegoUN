@@ -243,7 +243,7 @@ TextureImporter:
         height: 46
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: zerox6sheet1_22
+    - name: Attack_1_01
       rect:
         serializedVersion: 2
         x: 92
@@ -251,8 +251,8 @@ TextureImporter:
         width: 40
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_23
+      pivot: {x: .5, y: .5}
+    - name: Attack_1_02
       rect:
         serializedVersion: 2
         x: 137
@@ -260,8 +260,8 @@ TextureImporter:
         width: 50
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_24
+      pivot: {x: .5, y: .5}
+    - name: Attack_1_03
       rect:
         serializedVersion: 2
         x: 194
@@ -269,8 +269,8 @@ TextureImporter:
         width: 77
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_25
+      pivot: {x: .5, y: .5}
+    - name: Attack_1_04
       rect:
         serializedVersion: 2
         x: 274
@@ -278,8 +278,8 @@ TextureImporter:
         width: 77
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_26
+      pivot: {x: .5, y: .5}
+    - name: Attack_1_05
       rect:
         serializedVersion: 2
         x: 354
@@ -287,8 +287,8 @@ TextureImporter:
         width: 73
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_27
+      pivot: {x: .5, y: .5}
+    - name: Attack_1_06
       rect:
         serializedVersion: 2
         x: 432
@@ -296,8 +296,8 @@ TextureImporter:
         width: 51
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_28
+      pivot: {x: .5, y: .5}
+    - name: Attack_1_07
       rect:
         serializedVersion: 2
         x: 488
@@ -305,8 +305,8 @@ TextureImporter:
         width: 46
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_29
+      pivot: {x: .5, y: .5}
+    - name: Attack_1_08
       rect:
         serializedVersion: 2
         x: 541
@@ -314,8 +314,8 @@ TextureImporter:
         width: 46
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_30
+      pivot: {x: .5, y: .5}
+    - name: Attack_2_01
       rect:
         serializedVersion: 2
         x: 46
@@ -323,8 +323,8 @@ TextureImporter:
         width: 46
         height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_31
+      pivot: {x: .5, y: .5}
+    - name: Attack_2_02
       rect:
         serializedVersion: 2
         x: 98
@@ -332,8 +332,8 @@ TextureImporter:
         width: 64
         height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_32
+      pivot: {x: .5, y: .5}
+    - name: Attack_2_03
       rect:
         serializedVersion: 2
         x: 167
@@ -341,8 +341,8 @@ TextureImporter:
         width: 80
         height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_33
+      pivot: {x: .5, y: .5}
+    - name: Attack_2_04
       rect:
         serializedVersion: 2
         x: 251
@@ -350,8 +350,8 @@ TextureImporter:
         width: 99
         height: 57
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_34
+      pivot: {x: .5, y: .5}
+    - name: Attack_2_05
       rect:
         serializedVersion: 2
         x: 354
@@ -359,8 +359,8 @@ TextureImporter:
         width: 67
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_35
+      pivot: {x: .5, y: .5}
+    - name: Attack_2_06
       rect:
         serializedVersion: 2
         x: 423
@@ -368,8 +368,8 @@ TextureImporter:
         width: 67
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_36
+      pivot: {x: .5, y: .5}
+    - name: Attack_2_07
       rect:
         serializedVersion: 2
         x: 494
@@ -377,8 +377,8 @@ TextureImporter:
         width: 67
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_37
+      pivot: {x: .5, y: .5}
+    - name: Attack_2_08
       rect:
         serializedVersion: 2
         x: 564
@@ -386,8 +386,8 @@ TextureImporter:
         width: 67
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_38
+      pivot: {x: .5, y: .5}
+    - name: Attack_3_01
       rect:
         serializedVersion: 2
         x: 71
@@ -395,8 +395,8 @@ TextureImporter:
         width: 50
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_39
+      pivot: {x: .5, y: .5}
+    - name: Attack_3_02
       rect:
         serializedVersion: 2
         x: 127
@@ -404,8 +404,8 @@ TextureImporter:
         width: 79
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_40
+      pivot: {x: .5, y: .5}
+    - name: Attack_3_03
       rect:
         serializedVersion: 2
         x: 211
@@ -413,8 +413,8 @@ TextureImporter:
         width: 92
         height: 83
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_41
+      pivot: {x: .5, y: .5}
+    - name: Attack_3_04
       rect:
         serializedVersion: 2
         x: 308
@@ -422,8 +422,8 @@ TextureImporter:
         width: 88
         height: 86
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_42
+      pivot: {x: .5, y: .5}
+    - name: Attack_3_05
       rect:
         serializedVersion: 2
         x: 404
@@ -431,8 +431,8 @@ TextureImporter:
         width: 75
         height: 86
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_43
+      pivot: {x: .5, y: .5}
+    - name: Attack_3_06
       rect:
         serializedVersion: 2
         x: 485
@@ -440,8 +440,8 @@ TextureImporter:
         width: 57
         height: 86
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_44
+      pivot: {x: .5, y: .5}
+    - name: Attack_3_07
       rect:
         serializedVersion: 2
         x: 551
@@ -449,8 +449,8 @@ TextureImporter:
         width: 46
         height: 85
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_45
+      pivot: {x: .5, y: .5}
+    - name: hideBlade_01
       rect:
         serializedVersion: 2
         x: 195
@@ -458,8 +458,8 @@ TextureImporter:
         width: 43
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_46
+      pivot: {x: .5, y: .5}
+    - name: hideBlade_02
       rect:
         serializedVersion: 2
         x: 247
@@ -467,8 +467,8 @@ TextureImporter:
         width: 41
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_47
+      pivot: {x: .5, y: .5}
+    - name: hideBlade_03
       rect:
         serializedVersion: 2
         x: 297
@@ -476,8 +476,8 @@ TextureImporter:
         width: 40
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_48
+      pivot: {x: .5, y: .5}
+    - name: hideBlade_04
       rect:
         serializedVersion: 2
         x: 347
@@ -485,8 +485,8 @@ TextureImporter:
         width: 40
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_49
+      pivot: {x: .5, y: .5}
+    - name: hideBlade_05
       rect:
         serializedVersion: 2
         x: 396
@@ -494,8 +494,8 @@ TextureImporter:
         width: 46
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_50
+      pivot: {x: .5, y: .5}
+    - name: hideBlade_06
       rect:
         serializedVersion: 2
         x: 451
@@ -503,8 +503,8 @@ TextureImporter:
         width: 47
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_51
+      pivot: {x: .5, y: .5}
+    - name: Jump_01
       rect:
         serializedVersion: 2
         x: 183
@@ -512,8 +512,8 @@ TextureImporter:
         width: 39
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_52
+      pivot: {x: .5, y: .5}
+    - name: Jump_02
       rect:
         serializedVersion: 2
         x: 226
@@ -521,8 +521,8 @@ TextureImporter:
         width: 41
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_53
+      pivot: {x: .5, y: .5}
+    - name: Jump_03
       rect:
         serializedVersion: 2
         x: 271
@@ -530,8 +530,8 @@ TextureImporter:
         width: 42
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_54
+      pivot: {x: .5, y: .5}
+    - name: Jump_04
       rect:
         serializedVersion: 2
         x: 317
@@ -539,8 +539,8 @@ TextureImporter:
         width: 42
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_55
+      pivot: {x: .5, y: .5}
+    - name: Jump_05
       rect:
         serializedVersion: 2
         x: 363
@@ -548,8 +548,8 @@ TextureImporter:
         width: 44
         height: 56
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_56
+      pivot: {x: .5, y: .5}
+    - name: Jump_06
       rect:
         serializedVersion: 2
         x: 411
@@ -557,8 +557,8 @@ TextureImporter:
         width: 48
         height: 55
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_57
+      pivot: {x: .5, y: .5}
+    - name: Jump_07
       rect:
         serializedVersion: 2
         x: 463
@@ -566,8 +566,8 @@ TextureImporter:
         width: 44
         height: 67
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_58
+      pivot: {x: .5, y: .5}
+    - name: Fall_01
       rect:
         serializedVersion: 2
         x: 189
@@ -575,8 +575,8 @@ TextureImporter:
         width: 34
         height: 79
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_59
+      pivot: {x: .5, y: .5}
+    - name: Fall_02
       rect:
         serializedVersion: 2
         x: 227
@@ -584,8 +584,8 @@ TextureImporter:
         width: 34
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_60
+      pivot: {x: .5, y: .5}
+    - name: Fall_03
       rect:
         serializedVersion: 2
         x: 265
@@ -593,8 +593,8 @@ TextureImporter:
         width: 35
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_61
+      pivot: {x: .5, y: .5}
+    - name: Fall_04
       rect:
         serializedVersion: 2
         x: 304
@@ -602,8 +602,8 @@ TextureImporter:
         width: 35
         height: 79
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_62
+      pivot: {x: .5, y: .5}
+    - name: Fall_05
       rect:
         serializedVersion: 2
         x: 343
@@ -611,8 +611,8 @@ TextureImporter:
         width: 39
         height: 59
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_63
+      pivot: {x: .5, y: .5}
+    - name: Fall_06
       rect:
         serializedVersion: 2
         x: 386
@@ -620,8 +620,8 @@ TextureImporter:
         width: 41
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_64
+      pivot: {x: .5, y: .5}
+    - name: Fall_07
       rect:
         serializedVersion: 2
         x: 431
@@ -629,8 +629,8 @@ TextureImporter:
         width: 44
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
-    - name: zerox6sheet1_65
+      pivot: {x: .5, y: .5}
+    - name: Fall_08
       rect:
         serializedVersion: 2
         x: 479
@@ -638,6 +638,6 @@ TextureImporter:
         width: 43
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 
