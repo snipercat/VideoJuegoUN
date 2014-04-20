@@ -26,6 +26,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: Ground
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -64,6 +70,10 @@ Transition:
     m_ConditionEvent: Speed
     m_EventTreshold: .00999999978
     m_ExitTime: 1
+  - m_ConditionMode: 1
+    m_ConditionEvent: Ground
+    m_EventTreshold: .00999999978
+    m_ExitTime: 1
   m_Atomic: 0
   m_Solo: 0
   m_Mute: 0
@@ -80,6 +90,10 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: Attack
+    m_EventTreshold: 0
+    m_ExitTime: 1
+  - m_ConditionMode: 1
+    m_ConditionEvent: Ground
     m_EventTreshold: 0
     m_ExitTime: 1
   m_Atomic: 1
@@ -114,9 +128,9 @@ Transition:
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_Conditions:
-  - m_ConditionMode: 6
+  - m_ConditionMode: 3
     m_ConditionEvent: AttackCount
-    m_EventTreshold: 2
+    m_EventTreshold: 1
     m_ExitTime: 1
   - m_ConditionMode: 5
     m_ConditionEvent: AttackCount
@@ -155,8 +169,12 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: Ground
     m_EventTreshold: 0
+    m_ExitTime: 1
+  - m_ConditionMode: 6
+    m_ConditionEvent: AttackCount
+    m_EventTreshold: 2
     m_ExitTime: 1
   m_Atomic: 1
   m_Solo: 0
@@ -191,6 +209,28 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
+    m_ConditionEvent: Ground
+    m_EventTreshold: 0
+    m_ExitTime: 1
+  - m_ConditionMode: 6
+    m_ConditionEvent: AttackCount
+    m_EventTreshold: 1
+    m_ExitTime: 1
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+--- !u!1101 &110161476
+Transition:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110209952}
+  m_DstState: {fileID: 110282353}
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 5
     m_ConditionEvent: 
     m_EventTreshold: 0
     m_ExitTime: 1
@@ -209,8 +249,30 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
+    m_ConditionEvent: Ground
+    m_EventTreshold: 0
+    m_ExitTime: 1
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+--- !u!1101 &110181569
+Transition:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110295589}
+  m_DstState: {fileID: 110209952}
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 5
     m_ConditionEvent: 
     m_EventTreshold: 0
+    m_ExitTime: 1
+  - m_ConditionMode: 3
+    m_ConditionEvent: AttackCount
+    m_EventTreshold: 2
     m_ExitTime: 1
   m_Atomic: 1
   m_Solo: 0
@@ -242,6 +304,21 @@ State:
   - {fileID: 7400000, guid: 88c9eb701e7a32d47967080a6347e641, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
   m_Position: {x: 312, y: -36, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110209952
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Attack3
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: c9006fdad72c9d74c9f925fd54b1d7ef, type: 2}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: -108, y: 384, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -304,9 +381,14 @@ StateMachine:
   - {fileID: 110239782}
   - {fileID: 110295589}
   - {fileID: 110282353}
+  - {fileID: 110209952}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
+    data:
+      first: {fileID: 110209952}
+      second:
+      - {fileID: 110161476}
     data:
       first: {fileID: 0}
       second: []
@@ -329,6 +411,7 @@ StateMachine:
       first: {fileID: 110295589}
       second:
       - {fileID: 110129197}
+      - {fileID: 110181569}
     data:
       first: {fileID: 110282353}
       second:
