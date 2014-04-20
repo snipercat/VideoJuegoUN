@@ -26,6 +26,8 @@ public class ZeroControllerScript : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 
+	//cambio de variable vSpeed para cambiar animacion
+		anim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
 
 	//** HorizontalMovement
 		float move;
