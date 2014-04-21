@@ -88,9 +88,13 @@ public class ZeroControllerScript : MonoBehaviour {
 
 //**************************************************
 	void EndAttack(){
-		attacking = false;
-		anim.SetBool ("Attack", false);
-		anim.SetInteger ("AttackCount", 0);
+
+		//Si esta atacando cambia las variables, si no, se su pone que no deben estar en otro estado.
+		if (attacking) {
+				attacking = false;
+				anim.SetBool ("Attack", false);
+				anim.SetInteger ("AttackCount", 0);
+		}
 	}
 //**************************************************
 	void Flip(){

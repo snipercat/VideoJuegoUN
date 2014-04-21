@@ -83,7 +83,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 124577295}
   - 212: {fileID: 124577294}
-  - 114: {fileID: 124577293}
   - 50: {fileID: 124577292}
   - 61: {fileID: 124577291}
   - 61: {fileID: 124577296}
@@ -120,17 +119,6 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!114 &124577293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 124577290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8d8abce77589454c82d13f50cce5eef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &124577294
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -428,7 +416,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1513323068}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc6a0681d2249dd4f8e24956b7ba6f9c, type: 3}
   m_Name: 
