@@ -9,18 +9,27 @@ public class ZeroControllerScript : MonoBehaviour {
 	private Animator anim;
 	public float maxSpeed = 10f;
 	public LayerMask groundLayer;
+	public LayerMask objectLayer;
 	public float jumpForce=210f;
+	public bool autorun = false;
+
+	public AttackScript attackScript;
 
 	//Status (Change to Private)
 	public bool grounded = false;
 	public bool attacking = false;
 	private bool facingRight = true;
 
+	private bool alive = true;
+	private float lastX= 0;
+
 
 //**************************************************
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator> ();
+		attackScript = GetComponentInChildren<AttackScript> ();
+
 	}
 //**************************************************	
 	// Update is called once per frame
@@ -31,11 +40,10 @@ public class ZeroControllerScript : MonoBehaviour {
 
 	//** HorizontalMovement
 		float move;
-		//Si esta atacando y esta en el piso se queda quieto
-		if( attacking && grounded)
-				move = 0;
+		if (autorun)
+			move = 1;
 		else
-				move = Input.GetAxis( "Horizontal");
+			move = Input.GetAxis( "Horizontal");
 
 		// Aplicar movimiento
 		rigidbody2D.velocity = new Vector2 (maxSpeed * move, rigidbody2D.velocity.y);
@@ -52,8 +60,8 @@ public class ZeroControllerScript : MonoBehaviour {
 		
 	//*** Salto
 		if (grounded && Input.GetKeyDown (KeyCode.Space)) {
-			//anim.SetBool("Ground", false);
 			rigidbody2D.AddForce(new Vector2(0, jumpForce));			
+			EndAttack();
 		}
 		
 
@@ -64,21 +72,33 @@ public class ZeroControllerScript : MonoBehaviour {
 			if (!anim.GetCurrentAnimatorStateInfo (0).IsTag ("Attack")){
 				attacking = true;
 				anim.SetBool ("Attack", true);
+				attackScript.attacking = true;
 			}
 			anim.SetInteger ("AttackCount", anim.GetInteger ("AttackCount") + 1);
 		}
 	}
 //**************************************************
-	void OnTriggerEnter2D(Collider2D otherCollider){
+	// verificar si esta en el suelo
+	void OnTriggerStay2D(Collider2D otherCollider){
 		if (((1 << otherCollider.gameObject.layer) & groundLayer) != 0) {
-						grounded = true;
-						anim.SetBool ("Ground", true);
-				}
-	}
+			grounded = true;
+			anim.SetBool ("Ground", true);
+		}
+
+
+		if (((1 << otherCollider.gameObject.layer) & objectLayer) != 0) {
+			if(!attacking)
+			{
+				alive = false;
+				//Destroy (this);
+				anim.SetBool ("alive", false);
+				//Application.LoadLevel(Application.loadedLevel);
+			}
+
+		}
+	} 
 //**************************************************
 	void OnTriggerExit2D(Collider2D otherCollider){
-		//Flip ();
-
 		if (((1 << otherCollider.gameObject.layer) & groundLayer) != 0) {
 						grounded = false;
 						anim.SetBool("Ground", false);
@@ -94,6 +114,7 @@ public class ZeroControllerScript : MonoBehaviour {
 				attacking = false;
 				anim.SetBool ("Attack", false);
 				anim.SetInteger ("AttackCount", 0);
+				attackScript.attacking = false;
 		}
 	}
 //**************************************************
@@ -102,6 +123,10 @@ public class ZeroControllerScript : MonoBehaviour {
 		Vector3 newScale = transform.localScale;
 		newScale.x *= -1;
 		transform.localScale = newScale;
-
 	}
+
+	void Reset(){
+		Application.LoadLevel(Application.loadedLevel);
+	}
+
 }

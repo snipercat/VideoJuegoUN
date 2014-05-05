@@ -38,6 +38,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: alive
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 1
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -478,9 +484,8 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110246191}
-      second:
-      - {fileID: 110198787}
+      first: {fileID: 0}
+      second: []
     data:
       first: {fileID: 0}
       second:
@@ -514,6 +519,13 @@ StateMachine:
       first: {fileID: 110209952}
       second:
       - {fileID: 110161476}
+    data:
+      first: {fileID: 110246191}
+      second:
+      - {fileID: 110198787}
+    data:
+      first: {fileID: 110202448}
+      second: []
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -540, y: 156, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

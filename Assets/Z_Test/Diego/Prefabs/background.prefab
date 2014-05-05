@@ -9,12 +9,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  - 50: {fileID: 5000000}
   - 61: {fileID: 6100000}
-  - 95: {fileID: 9500000}
-  - 114: {fileID: 11400000}
+  - 50: {fileID: 5000000}
+  - 61: {fileID: 6100002}
   m_Layer: 8
-  m_Name: ZeroWalkingAnimator
+  m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,8 +26,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.49347973, y: 4.47500038, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 0}
+  m_LocalPosition: {x: -.016336441, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!50 &5000000
@@ -41,10 +40,10 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
-  m_FixedAngle: 1
-  m_IsKinematic: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
 --- !u!61 &6100000
 BoxCollider2D:
@@ -55,45 +54,19 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: .430000007, y: .200000003}
-  m_Center: {x: 0, y: .100000001}
---- !u!95 &9500000
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 86523a8caf7a4544296a7d12c10a7050, type: 2}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 0
-  m_AnimatePhysics: 1
-  m_HasTransformHierarchy: 1
---- !u!114 &11400000
-MonoBehaviour:
+  m_Size: {x: 20.4799995, y: .77204895}
+  m_Center: {x: 0, y: 2.78999996}
+--- !u!61 &6100002
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 944afd3ea4a74e24ca5ff69c3c3eeec3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: 7
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  objectLayer:
-    serializedVersion: 2
-    m_Bits: 1024
-  jumpForce: 310
-  autorun: 1
-  attackScript: {fileID: 0}
-  grounded: 0
-  attacking: 0
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Size: {x: 19.9899998, y: .219999999}
+  m_Center: {x: 0, y: 3.22000003}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -112,10 +85,10 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_SortingLayerID: 2603148175
-  m_Sprite: {fileID: 21300000, guid: e143a072271e4c444a4c8f46ff6c2672, type: 3}
+  m_SortingLayerID: 0
+  m_Sprite: {fileID: 21300000, guid: 57b86c7ead91e3147afe0b64d1c1d20b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
