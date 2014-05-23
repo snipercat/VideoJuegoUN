@@ -20,8 +20,7 @@ public class ZeroControllerScript : MonoBehaviour {
 	public bool attacking = false;
 	private bool facingRight = true;
 
-	private bool alive = true;
-	private float lastX= 0;
+
 
 
 //**************************************************
@@ -30,30 +29,31 @@ public class ZeroControllerScript : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 		attackScript = GetComponentInChildren<AttackScript> ();
 
+		transform.position = new Vector3 (0, -0.85f, 0);
+
 	}
 //**************************************************	
 	// Update is called once per frame
 	void FixedUpdate () {
+			//cambio de variable vSpeed para cambiar animacion
+			anim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
 
-	//cambio de variable vSpeed para cambiar animacion
-		anim.SetFloat ("vSpeed", rigidbody2D.velocity.y);
+			//** HorizontalMovement
+			float move;
+			if (autorun)
+					move = 1;
+			else
+					move = Input.GetAxis ("Horizontal");
 
-	//** HorizontalMovement
-		float move;
-		if (autorun)
-			move = 1;
-		else
-			move = Input.GetAxis( "Horizontal");
+			// Aplicar movimiento
+			rigidbody2D.velocity = new Vector2 (maxSpeed * move, rigidbody2D.velocity.y);
+			anim.SetFloat ("Speed", Mathf.Abs (move));
 
-		// Aplicar movimiento
-		rigidbody2D.velocity = new Vector2 (maxSpeed * move, rigidbody2D.velocity.y);
-		anim.SetFloat ("Speed", Mathf.Abs (move));
-
-		// Si cambio la direccion del movimiento, voltear al personaje
-		if ( move > 0 && !facingRight)
-						Flip ();
-		else if (move < 0 && facingRight)
-						Flip ();
+			// Si cambio la direccion del movimiento, voltear al personaje
+			if (move > 0 && !facingRight)
+					Flip ();
+			else if (move < 0 && facingRight)
+					Flip ();
 	}
 //**************************************************
 	void Update(){
@@ -89,7 +89,7 @@ public class ZeroControllerScript : MonoBehaviour {
 		if (((1 << otherCollider.gameObject.layer) & objectLayer) != 0) {
 			if(!attacking)
 			{
-				alive = false;
+
 				//Destroy (this);
 				anim.SetBool ("alive", false);
 				//Application.LoadLevel(Application.loadedLevel);
