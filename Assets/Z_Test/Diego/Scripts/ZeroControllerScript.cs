@@ -16,6 +16,8 @@ public class ZeroControllerScript : MonoBehaviour
 	public bool jumpButton = false;
 	public bool attackButton = false;
 	public AttackScript attackScript;
+
+
 	
 	//Status (Change to Private)
 	public bool grounded = false;
@@ -63,7 +65,7 @@ public class ZeroControllerScript : MonoBehaviour
 	{
 		
 		//*** Salto
-		if (grounded && jumpButton) {
+		if (grounded && (jumpButton || Input.GetKeyDown (KeyCode.Space) )) {
 			rigidbody2D.AddForce (new Vector2 (0, jumpForce));
 			jumpButton = false;
 			EndAttack ();
@@ -71,7 +73,7 @@ public class ZeroControllerScript : MonoBehaviour
 		
 		//*** Ataque
 		//SystemInfo esta en el suelo y se oprime Z, ataca y se aumenta uno al combo
-		if (attackButton && grounded) {
+		if ((attackButton || Input.GetKeyDown (KeyCode.Z)) && grounded) {
 			
 			if (!anim.GetCurrentAnimatorStateInfo (0).IsTag ("Attack")) {
 				attacking = true;
@@ -145,12 +147,12 @@ public class ZeroControllerScript : MonoBehaviour
 		// Make a background box
 		
 		// Make the first button. If it is pressed, monacho jumps
-		if (GUI.Button (new Rect (20, Screen.height-160, 120,120), "Saltar")) {
+		if (GUI.Button (new Rect (20, Screen.height-160, 90,90), "Saltar")) {
 			jumpButton = true;
 		}
 		
 		// Make the second button. If it is pressed, monacho attacks
-		if (GUI.Button (new Rect (Screen.width-140, Screen.height-160, 120,120 ), "Atacar")) {
+		if (GUI.Button (new Rect (Screen.width-110, Screen.height-160, 90,90 ), "Atacar")) {
 			attackButton = true;
 		}
 		
