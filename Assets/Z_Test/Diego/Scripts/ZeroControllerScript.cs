@@ -155,6 +155,10 @@ public class ZeroControllerScript : MonoBehaviour
 		if (GUI.Button (new Rect (Screen.width-110, Screen.height-160, 90,90 ), "Atacar")) {
 			attackButton = true;
 		}
+
+		//return to Menu
+		if (GUI.Button (new Rect (10, 10, 90,90 ), "regresar"))
+			Application.LoadLevel ("Menu0");
 		
 		
 	}

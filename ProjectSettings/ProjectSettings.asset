@@ -5,7 +5,7 @@ PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   AndroidProfiler: 0
-  defaultScreenOrientation: 0
+  defaultScreenOrientation: 3
   targetDevice: 2
   targetGlesGraphics: 1
   targetResolution: 0
@@ -25,7 +25,7 @@ PlayerSettings:
   m_MobileMTRendering: 0
   m_UseDX11: 0
   iosShowActivityIndicatorOnLoading: -1
-  androidShowActivityIndicatorOnLoading: -1
+  androidShowActivityIndicatorOnLoading: 2
   displayResolutionDialog: 1
   allowedAutorotateToPortrait: 1
   allowedAutorotateToPortraitUpsideDown: 1
@@ -73,7 +73,7 @@ PlayerSettings:
     16:10: 0
     16:9: 1
     Others: 0
-  iPhoneBundleIdentifier: com.Company.ProductName
+  iPhoneBundleIdentifier: com.universidadnacional.unvideojuego
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: 77453b57da589ac4eb7d15c88e116d40
@@ -94,7 +94,7 @@ PlayerSettings:
   iPhoneTargetOSVersion: 16
   uIPrerenderedIcon: 0
   uIRequiresPersistentWiFi: 0
-  uIStatusBarHidden: 1
+  uIStatusBarHidden: 0
   uIExitOnSuspend: 0
   uIStatusBarStyle: 0
   iPhoneSplashScreen: {fileID: 0}
@@ -116,6 +116,9 @@ PlayerSettings:
       m_Size: 128
   m_BuildTargetBatching:
   - m_BuildTarget: Standalone
+    m_StaticBatching: 1
+    m_DynamicBatching: 1
+  - m_BuildTarget: Android
     m_StaticBatching: 1
     m_DynamicBatching: 1
   webPlayerTemplate: APPLICATION:Default

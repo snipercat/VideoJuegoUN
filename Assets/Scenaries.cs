@@ -38,14 +38,14 @@ public class Scenaries : MonoBehaviour
 		currentScenaries.Add (initialPlataform);
 		currentScenaries.Add (other);
 
-		Debug.Log("message");
+
 	}
 
 	void FixedUpdate(){
 		//Debug.Log("message: "+ initialPlataform.FindChild("Left").transform.localPosition );
 		if (checkinside ())
 						createOther ();
-		Debug.Log (plataformsPosition.Count);
+
 	}
 
 

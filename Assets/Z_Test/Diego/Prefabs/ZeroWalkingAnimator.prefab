@@ -89,8 +89,10 @@ MonoBehaviour:
   objectLayer:
     serializedVersion: 2
     m_Bits: 1024
-  jumpForce: 310
-  autorun: 1
+  jumpForce: 610
+  autorun: 0
+  jumpButton: 0
+  attackButton: 0
   attackScript: {fileID: 0}
   grounded: 0
   attacking: 0
