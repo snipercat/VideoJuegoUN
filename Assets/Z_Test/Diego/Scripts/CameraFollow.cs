@@ -9,6 +9,7 @@ public class CameraFollow : MonoBehaviour {
 	public float damping = 5f;
 	public float horizontalOffset = 4f;
 
+	public bool follow = true;
 	// Use this for initialization
 	void Start () {
 	
@@ -16,11 +17,12 @@ public class CameraFollow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-		Camera.main.transform.position = new Vector3 (target.gameObject.transform.position.x + horizontalOffset,
+		if (follow) {
+						Camera.main.transform.position = new Vector3 (target.gameObject.transform.position.x + horizontalOffset,
 		                                              Camera.main.transform.position.y,
 		                                              Camera.main.transform.position.z
-		                                              );
+						);
+				}
 		                                              
 	}
 }

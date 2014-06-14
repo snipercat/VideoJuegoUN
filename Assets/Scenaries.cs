@@ -7,9 +7,11 @@ using UnityEngine;
 /// </summary>
 public class Scenaries : MonoBehaviour
 {
+	public int numberOfScenaries = 10;
 	public Transform[] scenaries;
 	private List<Transform> currentScenaries = new List<Transform>();
 	public Transform initialPlataform;
+	public Transform finalPlataform;
 
 
 	private List<Vector3> plataformsPosition = new List<Vector3>();
@@ -42,10 +44,14 @@ public class Scenaries : MonoBehaviour
 	}
 
 	void FixedUpdate(){
-		//Debug.Log("message: "+ initialPlataform.FindChild("Left").transform.localPosition );
-		if (checkinside ())
-						createOther ();
-
+				//Debug.Log("message: "+ initialPlataform.FindChild("Left").transform.localPosition );
+		if (numberOfScenaries >= 0 && checkinside ()) {
+						numberOfScenaries--;			
+						createOther ( numberOfScenaries <= 0 );
+						
+					if(numberOfScenaries  < 0)
+						gameObject.GetComponent<CameraFollow>().follow = false;
+				}
 	}
 
 
@@ -54,10 +60,10 @@ public class Scenaries : MonoBehaviour
 
 	}
 
-	void createOther(){
+	void createOther( bool final){
 
-		int a;
-		a = Random.Range(0, scenaries.Length);
+
+		Transform other;
 
 		//Destroy Plataform 
 		Destroy (currentScenaries.ElementAt (0).gameObject);
@@ -66,7 +72,13 @@ public class Scenaries : MonoBehaviour
 		plataformsPosition.RemoveAt(0);
 
 		// Instatiate move and add the second plataform
-		Transform other = Instantiate (scenaries [a]) as Transform;
+		if (!final) {
+				int a;
+				a = Random.Range (0, scenaries.Length);
+				other = Instantiate (scenaries [a]) as Transform;
+		} else {
+			 	other = Instantiate (finalPlataform) as Transform;
+		}
 		other.transform.position = new Vector2 ( plataformsPosition.ElementAt(1).x +  offsettXSide(other.FindChild ("Left").position.x, other) ,
 		                                        camheight);
 		extractPositions (other);

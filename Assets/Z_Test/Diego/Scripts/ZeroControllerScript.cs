@@ -11,6 +11,7 @@ public class ZeroControllerScript : MonoBehaviour
 	public float maxSpeed = 10f;
 	public LayerMask groundLayer;
 	public LayerMask objectLayer;
+	public LayerMask finishLayer;
 	public float jumpForce = 210f;
 	public bool autorun = false;
 	public bool jumpButton = false;
@@ -25,6 +26,7 @@ public class ZeroControllerScript : MonoBehaviour
 	private bool facingRight = true;
 	public bool alive = true;
 	private float lastX = -Mathf.Infinity;
+	private bool finished = false;
 	
 	
 	//**************************************************
@@ -114,7 +116,10 @@ public class ZeroControllerScript : MonoBehaviour
 				//anim.SetBool ("alive", false);
 				//Application.LoadLevel(Application.loadedLevel);
 			}
-			
+		}
+		//*** End of Level
+		if (((1 << otherCollider.gameObject.layer) & finishLayer) != 0) {
+			Finish();
 		}
 	}
 	//**************************************************
@@ -161,7 +166,12 @@ public class ZeroControllerScript : MonoBehaviour
 		anim.SetBool ("alive", true);
 
 	}
-	
+
+
+	//**************************************************
+	void Finish(){
+		finished = true;
+	}
 	
 	//Metodos de los botones---------------------------------------------------
 	void OnGUI ()
@@ -175,20 +185,29 @@ public class ZeroControllerScript : MonoBehaviour
 
 
 		else{
-			// Make the first button. If it is pressed, monacho jumps
-			if (GUI.Button (new Rect (20, Screen.height-160, 90,90), "Saltar")) {
-				jumpButton = true;
-			}
-			
-			// Make the second button. If it is pressed, monacho attacks
-			if (GUI.Button (new Rect (Screen.width-110, Screen.height-160, 90,90 ), "Atacar")) {
-				attackButton = true;
+			if(!finished){
+				// Make the first button. If it is pressed, monacho jumps
+				if (GUI.Button (new Rect (20, Screen.height-160, 90,90), "Saltar")) {
+					jumpButton = true;
+				}
+				
+				// Make the second button. If it is pressed, monacho attacks
+				if (GUI.Button (new Rect (Screen.width-110, Screen.height-160, 90,90 ), "Atacar")) {
+					attackButton = true;
+				}
 			}
 		}
 
 		//return to Menu
 		if (GUI.Button (new Rect (10, 10, 90,90 ), "regresar"))
 			Application.LoadLevel ("Menu0");
+
+		if (finished) {
+			if (GUI.Button (new Rect (Screen.width/2-75, Screen.height-160, 150,90), "Juego Terminado,\n¿Repetir?")) {
+				Reset();
+			}
+
+				}
 
 	}
 }
