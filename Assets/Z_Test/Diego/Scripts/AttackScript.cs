@@ -17,7 +17,7 @@ public class AttackScript : MonoBehaviour {
 	
 	}
 
-	void OnTriggerStay2D(Collider2D otherCollider){
+	void OnTriggerEnter2D(Collider2D otherCollider){
 
 		if (((1 << otherCollider.gameObject.layer) & objectLayer) != 0) {
 				if (attacking)
