@@ -3,6 +3,14 @@ using System.Collections;
 
 public class CharacterSelect : MonoBehaviour {
 
+//*** fontsize variables
+	float _oldWidth;
+	float _oldHeight;
+	float _fontSize = 14f;
+	float Ratio = 20f; 
+	float buttonW;
+	float buttonH;
+
 //*** Nombres de Ingenieros 
 	private string Problema;
 	private string[] ingenieros  = new string[3];
@@ -13,9 +21,9 @@ public class CharacterSelect : MonoBehaviour {
 
 
 //*** Buttons x position
-	private float x1 = 0.33f;
+	private float x1 = 0.20f;
 	private float x2 = 0.5f;
-	private float x3 = 0.67f;
+	private float x3 = 0.80f;
 
 //***Problems message
 	private float x4 = Screen.width/4;
@@ -62,10 +70,25 @@ public class CharacterSelect : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//changing font proportions
+		if (_oldWidth != Screen.width || _oldHeight != Screen.height) {
+			_oldWidth = Screen.width;
+			_oldHeight = Screen.height;
+			_fontSize = Mathf.Min(Screen.width, Screen.height) / Ratio;
+			buttonW = Screen.width/5;
+			buttonH = Screen.height/8;
+		}
 	
 	}
 
 	void OnGUI(){
+
+		GUI.skin.button.fixedWidth = buttonW;
+		GUI.skin.button.fixedHeight=buttonH;
+
+		//Proportion of font size
+		GUI.skin.button.fontSize = (int) _fontSize;
+		GUI.skin.label.fontSize = (int) _fontSize;
 
 		//***paint problem (Problema)
 
@@ -75,7 +98,7 @@ public class CharacterSelect : MonoBehaviour {
 			
 
 		//*** Paint Buttons
-		if (GUI.Button (new Rect (x1 * sw, y * sh, w * sw, h * sh), ingenieros[0])) {
+		if (GUI.Button (new Rect (x1 * sw, y * sh, buttonW, buttonH), ingenieros[0])) {
 						PlayerPrefs.SetString ("ingeniero", ingenieros[0]); //Asigna el nombre del ingeniero para mostrarlo en pantalla
 						PlayerPrefs.SetInt ("correcto", correcto == 0 ? 1: 0); //Evalua si la respuesta es correcta
 						PlayerPrefs.SetInt("Returning", 0);	// No se esta regresando, al terminar pasa a EndOfLevel 
@@ -83,7 +106,7 @@ public class CharacterSelect : MonoBehaviour {
 						Application.LoadLevel("GamePlay");
 				}
 
-		if (GUI.Button (new Rect (x2 * sw, y * sh, w * sw, h * sh), ingenieros[1])) {
+		if (GUI.Button (new Rect (x2 * sw, y * sh, buttonW, buttonH), ingenieros[1])) {
 						PlayerPrefs.SetString ("ingeniero", ingenieros[1]);
 						PlayerPrefs.SetInt ("correcto", correcto == 1 ? 1: 0);
 						PlayerPrefs.SetInt("Returning", 0);
@@ -91,7 +114,7 @@ public class CharacterSelect : MonoBehaviour {
 						Application.LoadLevel("GamePlay");
 				}
 
-		if (GUI.Button (new Rect (x3 * sw, y * sh, w * sw, h * sh), ingenieros[2])) {
+		if (GUI.Button (new Rect (x3 * sw, y * sh, buttonW, buttonH), ingenieros[2])) {
 						PlayerPrefs.SetString ("ingeniero", ingenieros[2]);
 						PlayerPrefs.SetInt ("correcto", correcto == 2 ? 1: 0);
 						PlayerPrefs.SetInt("Returning", 0);

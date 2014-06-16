@@ -3,7 +3,8 @@ using System.Collections;
 
 public class ZeroControllerScript : MonoBehaviour
 {
-	
+	float buttonW;
+	float buttonH;
 	
 	
 	//Parameters
@@ -176,10 +177,14 @@ public class ZeroControllerScript : MonoBehaviour
 	//Metodos de los botones---------------------------------------------------
 	void OnGUI ()
 	{
+		buttonW = Screen.width/5;
+		buttonH = Screen.height/5;
+
+
 		// Make a background box
 		//si esta muerto, pinta el boton para repetir
 		if (!alive) {
-			if (GUI.Button (new Rect (Screen.width/2-45, Screen.height-160, 90,90), "Repetir")) {
+			if (GUI.Button (new Rect (Screen.width/2f, Screen.height*0.3f, 150,90), "Repetir")) {
 				Reset();
 			}
 		}
@@ -187,24 +192,24 @@ public class ZeroControllerScript : MonoBehaviour
 		else{
 			if(!finished){
 				// Make the first button. If it is pressed, monacho jumps
-				if (GUI.Button (new Rect (20, Screen.height-160, 90,90), "Saltar")) {
+				if(GUI.Button(new Rect(0.1f*Screen.width,0.8f*Screen.height,buttonW,buttonH), "Saltar")) {
 					jumpButton = true;
 				}
 				
 				// Make the second button. If it is pressed, monacho attacks
-				if (GUI.Button (new Rect (Screen.width-110, Screen.height-160, 90,90 ), "Atacar")) {
+				if(GUI.Button(new Rect(0.7f*Screen.width,0.8f*Screen.height,buttonW,buttonH), "Atacar")) {
 					attackButton = true;
 				}
 			}
 		}
 
 		//return to Menu
-		if (GUI.Button (new Rect (10, 10, 90,90 ), "regresar"))
+		if (GUI.Button(new Rect(0.1f*Screen.width,0.1f*Screen.height,buttonW,buttonH), "regresar"))
 			Application.LoadLevel ("Menu0");
 
 		// si se ha terminado el nivel, se pinta el boton para continuar
 		if (finished) {
-			if (GUI.Button (new Rect (Screen.width/2-75, Screen.height-160, 150,90), "Nivel Terminado,\nContinuar.")) {
+			if (GUI.Button (new Rect (Screen.width*0.4f,Screen.height*0.3f,Screen.width*0.4f,Screen.height*0.2f), "Nivel Terminado,\nContinuar.")) {
 
 				//Carga una escena diferente dependiendo de si se est'a devolviendo o no.
 				if( PlayerPrefs.GetInt("Returning") == 1 ){
