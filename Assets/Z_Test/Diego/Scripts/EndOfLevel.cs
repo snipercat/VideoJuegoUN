@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class EndOfLevel : MonoBehaviour {
@@ -32,7 +32,7 @@ public class EndOfLevel : MonoBehaviour {
 	void OnGUI(){
 
 		// Paing Enginer Message ( message)
-			
+		GUI.Label (new Rect (sw/4 ,sh/4 , sw/2, sw/2), message);	
 			// Do Stuffs
 
 		//Pinta un bot'on para continuar

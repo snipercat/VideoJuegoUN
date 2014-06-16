@@ -87,7 +87,7 @@ public class CharacterSelect : MonoBehaviour {
 						PlayerPrefs.SetString ("ingeniero", ingenieros[1]);
 						PlayerPrefs.SetInt ("correcto", correcto == 1 ? 1: 0);
 						PlayerPrefs.SetInt("Returning", 0);
-						PlayerPrefs.SetString("Message",Mensajes[0] );
+						PlayerPrefs.SetString("Message",Mensajes[1] );
 						Application.LoadLevel("GamePlay");
 				}
 
@@ -95,7 +95,7 @@ public class CharacterSelect : MonoBehaviour {
 						PlayerPrefs.SetString ("ingeniero", ingenieros[2]);
 						PlayerPrefs.SetInt ("correcto", correcto == 2 ? 1: 0);
 						PlayerPrefs.SetInt("Returning", 0);
-						PlayerPrefs.SetString("Message",Mensajes[0] );
+						PlayerPrefs.SetString("Message",Mensajes[2] );
 						Application.LoadLevel("GamePlay");
 				}
 
