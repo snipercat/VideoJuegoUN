@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class CharacterSelect : MonoBehaviour {
@@ -16,6 +16,10 @@ public class CharacterSelect : MonoBehaviour {
 	private float x1 = 0.33f;
 	private float x2 = 0.5f;
 	private float x3 = 0.67f;
+
+//***Problems message
+	private float x4 = Screen.width/4;
+	private float y2 = Screen.height / 4;
 
 //*** Button common position Data
 	private float y = 0.73f;
@@ -65,14 +69,13 @@ public class CharacterSelect : MonoBehaviour {
 
 		//***paint problem (Problema)
 
-			// do stuffs
+		GUI.Label (new Rect (x4 , y2 , x4 * 2, y2 * 2), Problema);
 
 		// ** Pain Engineeers Name ( ingenieros [])
 			
-			// do stuffs
 
 		//*** Paint Buttons
-		if (GUI.Button (new Rect (x1 * sw, y * sh, w * sw, h * sh), "1")) {
+		if (GUI.Button (new Rect (x1 * sw, y * sh, w * sw, h * sh), ingenieros[0])) {
 						PlayerPrefs.SetString ("ingeniero", ingenieros[0]); //Asigna el nombre del ingeniero para mostrarlo en pantalla
 						PlayerPrefs.SetInt ("correcto", correcto == 0 ? 1: 0); //Evalua si la respuesta es correcta
 						PlayerPrefs.SetInt("Returning", 0);	// No se esta regresando, al terminar pasa a EndOfLevel 
@@ -80,7 +83,7 @@ public class CharacterSelect : MonoBehaviour {
 						Application.LoadLevel("GamePlay");
 				}
 
-		if (GUI.Button (new Rect (x2 * sw, y * sh, w * sw, h * sh), "2")) {
+		if (GUI.Button (new Rect (x2 * sw, y * sh, w * sw, h * sh), ingenieros[1])) {
 						PlayerPrefs.SetString ("ingeniero", ingenieros[1]);
 						PlayerPrefs.SetInt ("correcto", correcto == 1 ? 1: 0);
 						PlayerPrefs.SetInt("Returning", 0);
@@ -88,7 +91,7 @@ public class CharacterSelect : MonoBehaviour {
 						Application.LoadLevel("GamePlay");
 				}
 
-		if (GUI.Button (new Rect (x3 * sw, y * sh, w * sw, h * sh), "3")) {
+		if (GUI.Button (new Rect (x3 * sw, y * sh, w * sw, h * sh), ingenieros[2])) {
 						PlayerPrefs.SetString ("ingeniero", ingenieros[2]);
 						PlayerPrefs.SetInt ("correcto", correcto == 2 ? 1: 0);
 						PlayerPrefs.SetInt("Returning", 0);
