@@ -260,7 +260,6 @@ GameObject:
   - 81: {fileID: 865815459}
   - 114: {fileID: 865815464}
   - 114: {fileID: 865815466}
-  - 114: {fileID: 865815465}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -341,21 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72d69d118b99d742ba1dd3fc4c9d699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingeniero1: "Electr\xF3nico"
-  ingeniero2: "Mecatr\xF3nico"
-  ingeniero3: 'Electricista '
   correcto: 3
---- !u!114 &865815465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 865815458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b66b7db591df6bc48b5e79f112b2b1d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &865815466
 MonoBehaviour:
   m_ObjectHideFlags: 0
