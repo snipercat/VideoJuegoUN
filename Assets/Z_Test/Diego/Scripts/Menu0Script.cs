@@ -36,7 +36,7 @@ public class Menu0Script : MonoBehaviour {
 		Rect exitRect = new Rect (x + width + distanceH , y, width, height);
 
 		if (GUI.Button (startRect, "Comenzar"))
-						Application.LoadLevel ("walk_test");
+						Application.LoadLevel ("CharacterSelect");
 		if (GUI.Button (exitRect, "Salir"))
 						Application.Quit ();
 
@@ -45,7 +45,7 @@ public class Menu0Script : MonoBehaviour {
 	}
 
 	int NW( int nx ){
-		Debug.Log ((nx + 0f)/relativeX);
+		//Debug.Log ((nx + 0f)/relativeX);
 		return  Mathf.FloorToInt ((nx + 0f) / relativeX * Screen.width);
 
 	}

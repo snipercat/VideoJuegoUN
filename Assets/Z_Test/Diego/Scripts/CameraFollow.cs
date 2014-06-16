@@ -17,6 +17,8 @@ public class CameraFollow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		// En cuando el personaje llegue a la plataforma final, se cambia el valor de follow
+		// y la camara dejara de seguirlo.
 		if (follow) {
 						Camera.main.transform.position = new Vector3 (target.gameObject.transform.position.x + horizontalOffset,
 		                                              Camera.main.transform.position.y,

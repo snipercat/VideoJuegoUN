@@ -177,13 +177,13 @@ public class ZeroControllerScript : MonoBehaviour
 	void OnGUI ()
 	{
 		// Make a background box
+		//si esta muerto, pinta el boton para repetir
 		if (!alive) {
 			if (GUI.Button (new Rect (Screen.width/2-45, Screen.height-160, 90,90), "Repetir")) {
 				Reset();
 			}
-				}
-
-
+		}
+		// si no esta muerto y no se ha acabado el nivel, pinta los botones de saltar y atacar
 		else{
 			if(!finished){
 				// Make the first button. If it is pressed, monacho jumps
@@ -202,9 +202,17 @@ public class ZeroControllerScript : MonoBehaviour
 		if (GUI.Button (new Rect (10, 10, 90,90 ), "regresar"))
 			Application.LoadLevel ("Menu0");
 
+		// si se ha terminado el nivel, se pinta el boton para continuar
 		if (finished) {
-			if (GUI.Button (new Rect (Screen.width/2-75, Screen.height-160, 150,90), "Juego Terminado,\n¿Repetir?")) {
-				Reset();
+			if (GUI.Button (new Rect (Screen.width/2-75, Screen.height-160, 150,90), "Nivel Terminado,\nContinuar.")) {
+
+				//Carga una escena diferente dependiendo de si se est'a devolviendo o no.
+				if( PlayerPrefs.GetInt("Returning") == 1 ){
+					Application.LoadLevel("CharacterSelect");
+				}
+				else{
+					Application.LoadLevel("EndOfLevel");
+				}
 			}
 
 				}
