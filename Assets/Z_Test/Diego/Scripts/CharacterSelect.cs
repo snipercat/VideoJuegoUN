@@ -27,7 +27,7 @@ public class CharacterSelect : MonoBehaviour {
 
 //***Problems message
 	private float x4 = Screen.width/4;
-	private float y2 = Screen.height / 4;
+	private float y2 = Screen.height / 8;
 
 //*** Button common position Data
 	private float y = 0.73f;
