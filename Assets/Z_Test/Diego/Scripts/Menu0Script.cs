@@ -16,7 +16,7 @@ public class Menu0Script : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		PlayerPrefs.SetInt("Level",0);
 		x = NW (x);
 		y = NH (y);
 		width = NW (width);

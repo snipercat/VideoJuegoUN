@@ -59,7 +59,7 @@ public class EndOfLevel : MonoBehaviour {
 			if( PlayerPrefs.GetInt("correcto") == 1 ){
 
 				int Level = PlayerPrefs.GetInt("Level")+1;
-				if( Level <=1){
+				if( Level < Parameters.LEVELS){
 					PlayerPrefs.SetInt("Level",Level);
 					Application.LoadLevel("CharacterSelect");
 				}
