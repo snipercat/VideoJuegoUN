@@ -19,7 +19,7 @@ public class ZeroControllerScript : MonoBehaviour
 	public bool attackButton = false;
 	public AttackScript attackScript;
 	
-	
+
 	
 	//Status (Change to Private)
 	public bool grounded = true;
@@ -184,7 +184,7 @@ public class ZeroControllerScript : MonoBehaviour
 		// Make a background box
 		//si esta muerto, pinta el boton para repetir
 		if (!alive) {
-			if (GUI.Button (new Rect (Screen.width/2f, Screen.height*0.3f, 150,90), "Repetir")) {
+			if (GUI.Button (new Rect (0.40f * Screen.width, Screen.height*0.3f, 150,90), "Repetir")) {
 				Reset();
 			}
 		}
@@ -192,19 +192,19 @@ public class ZeroControllerScript : MonoBehaviour
 		else{
 			if(!finished){
 				// Make the first button. If it is pressed, monacho jumps
-				if(GUI.Button(new Rect(0.1f*Screen.width,0.8f*Screen.height,buttonW,buttonH), "Saltar")) {
+				if(GUI.Button(new Rect(0.02f*Screen.width,0.8f*Screen.height,buttonW,buttonH), "Saltar")) {
 					jumpButton = true;
 				}
 				
 				// Make the second button. If it is pressed, monacho attacks
-				if(GUI.Button(new Rect(0.7f*Screen.width,0.8f*Screen.height,buttonW,buttonH), "Atacar")) {
+				if(GUI.Button(new Rect(0.78f*Screen.width,0.8f*Screen.height,buttonW,buttonH), "Atacar")) {
 					attackButton = true;
 				}
 			}
 		}
 
 		//return to Menu
-		if (GUI.Button(new Rect(0.1f*Screen.width,0.1f*Screen.height,buttonW,buttonH), "regresar"))
+		if (GUI.Button(new Rect(0.02f*Screen.width,0.14f*Screen.height,buttonW,buttonH), "regresar"))
 			Application.LoadLevel ("Menu0");
 
 		// si se ha terminado el nivel, se pinta el boton para continuar

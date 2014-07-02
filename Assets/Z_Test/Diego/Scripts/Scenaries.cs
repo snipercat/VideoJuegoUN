@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class Scenaries : MonoBehaviour
 {
-	public int numberOfScenaries = 3;
+	private int numberOfScenaries = 3;
 	public Transform[] scenaries;
 	private List<Transform> currentScenaries = new List<Transform>();
 	public Transform initialPlataform;
@@ -20,7 +20,12 @@ public class Scenaries : MonoBehaviour
 
 	/*cax = -6.49348
 		platx = -5.953453 - 
-*/
+*/	
+
+	public int scenariesLeft(){
+		return numberOfScenaries;
+	}
+
 	void Start(){
 		numberOfScenaries = Parameters.getPlataformsForLevel (PlayerPrefs.GetInt ("Level"));
 		// get a random Plataform from the List

@@ -11,7 +11,7 @@ public static class Parameters {
 
 	public static int LEVELS = 6;
 
-	public static int[] plataformas = { 3, 3, 3, 3, 3, 3 };
+	public static int[] plataformas = { 3, 5, 7, 9, 11, 15 };
 
 	private static string[] problems = new string[] 
 		{ "Se necesita restablecer la energía en la facultad de Ingeniería. ¿Cuál de estos profesionales escogerías?" 

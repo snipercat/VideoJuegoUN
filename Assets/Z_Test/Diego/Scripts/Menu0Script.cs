@@ -3,6 +3,11 @@ using System.Collections;
 
 public class Menu0Script : MonoBehaviour {
 
+	float _oldWidth;
+	float _oldHeight;
+	float _fontSize = 14f;
+	float Ratio = 20f;
+
 	private int relativeX = 709;
 	private int relativeY = 399;
 
@@ -27,10 +32,25 @@ public class Menu0Script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		//changing font proportions
+		if (_oldWidth != Screen.width || _oldHeight != Screen.height) {
+			_oldWidth = Screen.width;
+			_oldHeight = Screen.height;
+			_fontSize = Mathf.Min(Screen.width, Screen.height) / Ratio;
+			
+		}
 	
 	}
 
 	void OnGUI(){
+
+
+		
+		//Proportion of font size
+		GUI.skin.button.fontSize = (int) _fontSize;
+		GUI.skin.label.fontSize = (int) _fontSize;
+
 
 		Rect startRect = new Rect (x , y, width, height);
 		Rect exitRect = new Rect (x + width + distanceH , y, width, height);

@@ -26,13 +26,12 @@ public class CharacterSelect : MonoBehaviour {
 	private float x3 = 0.80f;
 
 //***Problems message
-	private float x4 = Screen.width/4;
+	private float x4 = Screen.width/8;
 	private float y2 = Screen.height / 8;
 
 //*** Button common position Data
 	private float y = 0.73f;
-	private float w = 0.09f;
-	private float h = 0.14f;
+
 
 //***
 	private int sw = Screen.width;
@@ -92,7 +91,7 @@ public class CharacterSelect : MonoBehaviour {
 
 		//***paint problem (Problema)
 
-		GUI.Label (new Rect (x4 , y2 , x4 * 2, y2 * 2), Problema);
+		GUI.Label (new Rect (x4 , 0.05f* sh ,  0.8f*sw , y2 * 4), Problema);
 
 		// ** Pain Engineeers Name ( ingenieros [])
 			

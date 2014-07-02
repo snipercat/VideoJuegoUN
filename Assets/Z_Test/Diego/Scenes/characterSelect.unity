@@ -191,7 +191,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 320c65626f8013846acfd36b52b16f76, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea79cb9ed1569f347a96fa9d2adaa17c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &713277515
 Transform:
@@ -201,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 713277512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .90816164, y: -1.50599635, z: 0}
-  m_LocalScale: {x: .100000001, y: .100000001, z: 1}
+  m_LocalScale: {x: .25, y: .25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &822407307
@@ -400,7 +400,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 95a08756d20dbea41aac3458cb9349b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6167f7bd30e97be45b22ba76a796cacb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &908056325
 Transform:
@@ -410,7 +410,7 @@ Transform:
   m_GameObject: {fileID: 908056322}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.31367469, y: -1.48157632, z: 0}
-  m_LocalScale: {x: .100000001, y: .100000001, z: 1}
+  m_LocalScale: {x: .25, y: .25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1001 &935194472
@@ -455,15 +455,15 @@ Prefab:
     - target: {fileID: 21200000, guid: 68e16673424adb04fae5366a6185fe84, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 95a08756d20dbea41aac3458cb9349b6,
+      objectReference: {fileID: 21300000, guid: 6167f7bd30e97be45b22ba76a796cacb,
         type: 3}
     - target: {fileID: 400000, guid: 68e16673424adb04fae5366a6185fe84, type: 2}
       propertyPath: m_LocalScale.x
-      value: .100000001
+      value: .25
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68e16673424adb04fae5366a6185fe84, type: 2}
       propertyPath: m_LocalScale.y
-      value: .100000001
+      value: .25
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 68e16673424adb04fae5366a6185fe84, type: 2}
@@ -607,15 +607,15 @@ Prefab:
     - target: {fileID: 21200000, guid: 68e16673424adb04fae5366a6185fe84, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 320c65626f8013846acfd36b52b16f76,
+      objectReference: {fileID: 21300000, guid: ea79cb9ed1569f347a96fa9d2adaa17c,
         type: 3}
     - target: {fileID: 400000, guid: 68e16673424adb04fae5366a6185fe84, type: 2}
       propertyPath: m_LocalScale.x
-      value: .100000001
+      value: .25
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68e16673424adb04fae5366a6185fe84, type: 2}
       propertyPath: m_LocalScale.y
-      value: .100000001
+      value: .25
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 68e16673424adb04fae5366a6185fe84, type: 2}
@@ -661,7 +661,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_SortingLayerID: 0
-  m_Sprite: {fileID: 21300000, guid: 9d14e1dabdf3d1846b0be583d3897229, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b422288407b39743b14d6c2256ef773, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1146172048
 Transform:
@@ -671,7 +671,7 @@ Transform:
   m_GameObject: {fileID: 1146172046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.11271667, y: -1.51064241, z: 0}
-  m_LocalScale: {x: .100000001, y: .100000001, z: 1}
+  m_LocalScale: {x: .25, y: .25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &1161468494
@@ -1013,15 +1013,15 @@ Prefab:
     - target: {fileID: 21200000, guid: 68e16673424adb04fae5366a6185fe84, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9d14e1dabdf3d1846b0be583d3897229,
+      objectReference: {fileID: 21300000, guid: 7b422288407b39743b14d6c2256ef773,
         type: 3}
     - target: {fileID: 400000, guid: 68e16673424adb04fae5366a6185fe84, type: 2}
       propertyPath: m_LocalScale.x
-      value: .100000001
+      value: .25
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68e16673424adb04fae5366a6185fe84, type: 2}
       propertyPath: m_LocalScale.y
-      value: .100000001
+      value: .25
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 68e16673424adb04fae5366a6185fe84, type: 2}

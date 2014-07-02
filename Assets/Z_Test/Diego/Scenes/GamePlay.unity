@@ -762,11 +762,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3d377bdf11b6e4c888dcbec5641af3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfScenaries: 3
   scenaries:
   - {fileID: 400000, guid: fed9fb376d10b2d4c8d72e0da252185b, type: 2}
-  - {fileID: 400002, guid: cb2e534863722d2439ead91c6c1ab204, type: 2}
   - {fileID: 400006, guid: f97adb9f65e010644bc9cee893c5979b, type: 2}
+  - {fileID: 400002, guid: cb2e534863722d2439ead91c6c1ab204, type: 2}
   initialPlataform: {fileID: 1190504857}
   finalPlataform: {fileID: 400000, guid: bc64371ec22133d408be704f32abe3f9, type: 2}
 --- !u!114 &1513323076
@@ -780,3 +779,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1962c8727d02ac647a9d7f618c162282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x1: .0199999996
+  x2: .449999988
+  x3: .800000012
